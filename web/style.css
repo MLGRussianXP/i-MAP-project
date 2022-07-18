@@ -1,0 +1,16 @@
+.body {
+    margin: 0px
+}
+
+.container {
+    overflow: hidden;
+}
+
+.box {
+    white-space: nowrap
+}
+
+.box div {
+    display: inline-block;
+    border: 1px solid black
+}
