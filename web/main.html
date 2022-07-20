@@ -9,19 +9,1140 @@
 
     <script src="eel.js"></script>
     <link rel="icon" type="immage/ico" href="/favicon.ico">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+    var submit_button = document.getElementById("submit-button");
+    ele.addEventListener("submit", callback, false);
+
+    function callback() {
+        var tests = [];
+        for(var i = 0; i < 7; i++) {
+            tests.push([]);
+            var block = document.getElementById("b" + i);
+
+            var answers = block.getElementsByClassName("questions")
+            for(var j = 0; j < answers.length; j++) {
+                tests[i].push([]); /* fffffffffffffffffffffffff */
+                data = answers.getElementsByTagName("input")
+                for(var n = 0; n < data.length; n++) {
+                    if (data[j].value != null) {
+
+                    }
+                }
+            }
+        }
+    }
+    </script>
+
     <div class="container">
            <div class="box">
-               <form action="" method="post">
-                  <div>
-                      <h2><input type="text" name="name"></h2>
+               <form method="post">
+                  <div class="block" id="1b">
+                      <input type="text" name="test" placeholder="Название теста" class="test_input">
+                      <br>
+                      <div class="number">1</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">2</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">3</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">4</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">5</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">6</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">7</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">8</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">9</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">10</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">11</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">12</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">13</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">14</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">15</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">16</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">17</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">18</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">19</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">20</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
                   </div>
 
-                  <div>content2</div>
+                  <div class="block" id="2b">
+                      <input type="text" name="test" placeholder="Название теста" class="test_input">
+                      <br>
+                      <div class="number">1</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
 
-                  <div>content3</div>
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">2</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">3</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">4</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">5</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">6</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">7</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">8</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">9</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">10</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">11</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">12</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">13</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">14</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">15</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">16</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">17</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">18</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">19</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">20</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+                  </div>
+
+                   <div class="block" id="3b">
+                      <input type="text" name="test" placeholder="Название теста" class="test_input">
+                      <br>
+                      <div class="number">1</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">2</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">3</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">4</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">5</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">6</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">7</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">8</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">9</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">10</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">11</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">12</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">13</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">14</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">15</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">16</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">17</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">18</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">19</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">20</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+                  </div>
+
+                   <div class="block" id="4b">
+                      <input type="text" name="test" placeholder="Название теста" class="test_input">
+                      <br>
+                      <div class="number">1</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">2</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">3</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">4</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">5</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">6</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">7</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">8</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">9</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">10</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">11</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">12</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">13</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">14</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">15</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">16</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">17</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">18</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">19</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">20</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+                  </div>
+
+                   <div class="block" id="5b">
+                      <input type="text" name="test" placeholder="Название теста" class="test_input">
+                      <br>
+                      <div class="number">1</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">2</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">3</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">4</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">5</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">6</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">7</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">8</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">9</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">10</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">11</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">12</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">13</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">14</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">15</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">16</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">17</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">18</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">19</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">20</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+                  </div>
+
+                   <div class="block" id="6b">
+                      <input type="text" name="test" placeholder="Название теста" class="test_input">
+                      <br>
+                      <div class="number">1</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">2</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">3</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">4</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">5</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">6</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">7</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">8</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">9</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">10</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">11</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">12</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">13</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">14</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">15</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">16</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">17</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">18</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">19</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+
+                      <div class="number">20</div>
+                      <div class="questions">
+                          <label for="grade">Оценка</label>
+                          <input type="number" min="1" max="10" name="grade" class="grade_input" placeholder="1-10" width="5%">
+
+                          <label for="truth">Честность</label>
+                          <input type="number" min="1" max="5" name="truth" class="truth_input" placeholder="1-5">
+                      </div>
+                  </div>
+                   <input type="submit" value="Рассчитать" id="submit-button">
                </form>
            </div>
     </div>

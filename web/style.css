@@ -1,5 +1,5 @@
-.body {
-    margin: 0px
+.body, label {
+    font-family: Verdana, Arial, sans-serif;
 }
 
 .container {
@@ -10,7 +10,33 @@
     white-space: nowrap
 }
 
-.box div {
+.block {
     display: inline-block;
-    border: 1px solid black
+    border: 1px solid black;
+    text-align: center;
+    width: calc(98% / 6);
+}
+
+.test_input {
+    padding: 10px;
+    margin: 10px;
+}
+
+.questions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.number {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: lightblue;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
