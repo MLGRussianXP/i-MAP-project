@@ -1,23 +1,68 @@
+function get_column_data(trs, column_idx) {
+  let column = [];
+  for (let m = 1; m < trs.length; m++) {
+    column.push(trs[m].getElementsByTagName('td')[column_idx].getElementsByTagName('input')[0]);
+  }
+  return column;
+}
+
+
 async function callback() {
-    const formElements = document.querySelectorAll(
-      '#form input[type="number"]'
-    );
+  var blocks = document.getElementsByClassName("block");
+  for (var i = 0; i < blocks.length; i++) {
+    let block = blocks[i];
 
-    let values = [];
-    formElements.forEach(input => {
-      values.push(input.value);
-    });
-
-    let data = await eel.get_statistics(values)();
-    document.getElementsByClassName('main-output')[0].innerHTML = data[0];
-    if (!data[2]) {
-        let blocks_outputs = document.getElementsByClassName('result-stats');
-        let idx = 0;
-        for (let output of blocks_outputs) {
-          let block = data[1][idx];
-          output.innerHTML = 'Ср. ариф. "Оценка": ' + block[0].toString() + '<br>Ср. ариф. "Честность": ' + block[1].toString();
-          idx += 1;
-        }
+    var table = document.getElementById(`result-table${i + 1}`);
+    if (table == null) {
+      var table = document.createElement('table');
+      table.className = "result-table";
+      table.id = `result-table${i + 1}`;
+      let tr = document.createElement('tr');
+      for (var j = 6; j > 0; j--) {
+        let th = document.createElement('th');
+        tr.appendChild(th);
+      }
+      table.appendChild(tr);
+      block.insertBefore(table, document.getElementById(`button-add${i + 1}`))
     }
-    return false;
+
+    let main_table = document.getElementById(`table${i + 1}`);
+    let ths = table.getElementsByTagName('th');
+
+    // Выручка
+    let revenue_column = get_column_data(main_table.getElementsByTagName('tr'), 1);
+    let total_revenue = 0;
+    revenue_column.forEach(input => {
+      total_revenue += input.valueAsNumber
+    });
+    ths[2].innerHTML = total_revenue;
+
+
+    // Поддержка
+    let support_column = get_column_data(main_table.getElementsByTagName('tr'), 2);
+    let total_support = 0;
+    for (var s = 0; s < support_column.length; s++) {
+      if (support_column[s].checked == true) {
+        total_support += 1;
+      }
+    }
+    ths[3].innerHTML = total_support;
+
+    // 3 параметр
+    let third_column = get_column_data(main_table.getElementsByTagName('tr'), 3);
+    let total_third = 0;
+    third_column.forEach(input => {
+      total_third += input.valueAsNumber
+    });
+    ths[4].innerHTML = total_third;
+
+    // 4 параметр
+    let fourth_column = get_column_data(main_table.getElementsByTagName('tr'), 4);
+    let total_fourth = 0;
+    fourth_column.forEach(input => {
+      total_fourth += input.valueAsNumber
+    });
+    ths[5].innerHTML = total_fourth;
+  }
+  return false;
 }
