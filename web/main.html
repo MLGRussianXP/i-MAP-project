@@ -16,6 +16,7 @@
 <body onload="onload();">
     <div class="container">
            <div class="box">
+               <a href="month.html"><button type="button" class="button">Итог за месяц</button></a>
                <form onsubmit="callback(); return false;" id="form">
                   <div class="block" id="1b">
                       <div class="big-number">1</div>
@@ -46,9 +47,17 @@
                       <div class="big-number">6</div>
                       <br>
                    </div>
-                   <br>
-                   <input type="submit" value="Рассчитать" class="button">
-                   <button type="button" class="button">Добавить в месячную<br>таблицу</button>
+
+                   <div>
+                        <input type="submit" value="Рассчитать" class="button" id="calculate">
+                   </div>
+
+                   <div class="add-month-table-block">
+                       <input type="date" required id="date-add-month-table">
+                       <button type="button" class="button" onclick="add_data_to_table();">
+                           Добавить в месячную<br>таблицу
+                       </button>
+                   </div>
                </form>
            </div>
     </div>

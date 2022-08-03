@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test formatting for i-MAP</title>
+
+    <script type="text/javascript" src="eel.js"></script>
+    <script type="text/javascript" src="month_load.js"></script>
+
+    <link rel="icon" type="immage/ico" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="month_load();">
+    <div class="container">
+        <input type="month" id="date-for-month-table" required>
+        <br>
+
+        <script type="text/javascript">
+            async function display_table() {
+                let date_block = document.getElementById('date-for-month-table');
+                await change_table(date_block.valueAsDate);
+                console.log(date_block.valueAsDate);
+            }
+        </script>
+        <button type="button" class="button" onclick="display_table();">Просмотреть данные</button>
+
+        <table class="table" id="month-table">
+        </table>
+    </div>
+</body>
+</html>

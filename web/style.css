@@ -50,21 +50,25 @@ body {
     font-size: 300%;
 }
 
-input[type='number']{
+input[type='number'] {
     width: 80%;
 }
 
-input[type='text']{
+input[type='text'] {
     width: 85%;
+}
+
+input[type='date'] {
+    margin: 1.35% 0 0 0;
 }
 
 /* Table */
 .table, .result-table {
     border: 1px solid #eee;
+    border-collapse: collapse;
     table-layout: fixed;
     width: 100%;
     margin-bottom: 20px;
-    border-collapse: collapse;
 }
 
 .table th, .result-table th {
@@ -72,6 +76,32 @@ input[type='text']{
     padding: 5px;
     background: #efefef;
     border: 1px solid #dddddd;
+}
+
+.table td, .result-table td{
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.table tr:nth-child(odd) {
+    background: #fff;
+}
+
+.table tr:nth-child(even) {
+    background: #F7F7F7;
+}
+
+.small-th {
+    font-size: 50%;
+    text-align: center;
+}
+
+#month-table td {
+    font-size: 80%;
+}
+
+.ser-num {
+    padding: 0;
 }
 /* End Table*/
 

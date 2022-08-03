@@ -3,7 +3,7 @@ function create_num_td () {
 	var input = document.createElement("input");
 	input.setAttribute("type", "number");
 	input.setAttribute("min", "0");
-	input.required = true;
+	// input.required = true;        ////////////////////////////////// required
 	input_contrainer.appendChild(input);
 	return input_contrainer;
 }
@@ -21,6 +21,7 @@ function add_line (id) {
 		number_value = parseInt(number_value) + 1;
 	}
 	let number = document.createElement("th");
+	number.setAttribute('scope', 'row');
 	number.innerHTML = number_value;
 
 	// name_input
@@ -29,7 +30,7 @@ function add_line (id) {
 	name_input.setAttribute("type", "text");
 	name_input.setAttribute("name", "name_imap");
 	name_input.setAttribute("size", "20");
-	name_input.required = true;
+	// name_input.required = true;             ////////////////////////////////// required
 	name_input_contrainer.appendChild(name_input);
 
 	// revenue_input
@@ -80,7 +81,7 @@ function del_line (id) {
 }
 
 
-function onload () {
+function onload() {
 	var blocks = document.getElementsByClassName("block");
 	for (let i = 0; i < blocks.length; i++) {
 		let block = blocks[i];
@@ -143,4 +144,8 @@ function onload () {
 		del_line_button.setAttribute("id", `button-del${i + 1}`)
 		block.appendChild(del_line_button);
 	}
+
+	var date = new Date();
+	let date_input = document.getElementById('date-add-month-table');
+	date_input.valueAsDate = date;
 }
