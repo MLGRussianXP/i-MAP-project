@@ -13,6 +13,7 @@ async function change_table(date) { // Data in table
 	}
 
 	let data = await eel.return_month_table(date)();
+	let trs_result = [];
 	for (var i = 0; i < data.length; i++) {
 		let cur_day_data = data[i];
 		let num_tr = document.createElement('tr');
@@ -28,7 +29,34 @@ async function change_table(date) { // Data in table
 			num_tr.appendChild(td);
 		}
 		table.appendChild(num_tr);
+		trs_result.push(num_tr);
 	}
+
+	let result_tr = document.createElement('tr');
+	let result_title = document.createElement('th');
+	result_title.innerHTML = "Итог";
+	console.log(trs_result);
+	result_tr.appendChild(result_title);
+	for (var i = 0; i < 24; i++) {
+		let column = [];
+		for (let m = 0; m < trs_result.length; m++) {
+		    column.push(trs_result[m].getElementsByTagName('td')[i].innerHTML);
+		}
+
+		let exit_sum = 0;
+		for (var j = 0; j < column.length; j++) {
+			if (column[j] != "") {
+				exit_sum += parseInt(column[j]);
+			}
+		}
+
+		let this_th = document.createElement('th');
+		this_th.innerHTML = exit_sum;
+		result_tr.appendChild(this_th);
+	}
+	table.appendChild(result_tr);
+
+
 	return false;
 }
 
@@ -53,13 +81,16 @@ async function month_load() { // Main / Design
 		var th = document.createElement('th');
 		th.setAttribute('scope', 'col');
 		th.setAttribute('colspan', '4');
+		th.id = "th-bold";
 		th.appendChild(div_big_number);
 		number_tr.appendChild(th);
 	}
 	table.appendChild(number_tr);
 
 	let parameters_tr = document.createElement('tr');
-	parameters_tr.appendChild(document.createElement('th'));
+	let day_tr = document.createElement('th');
+	day_tr.innerHTML = "День"
+	parameters_tr.appendChild(day_tr);
 	for (var i = 1; i < 7; i++) {
 		var th = document.createElement('th');
 		th.innerHTML = 'Объём выручки';

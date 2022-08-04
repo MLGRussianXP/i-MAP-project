@@ -62,6 +62,11 @@ input[type='date'] {
     margin: 1.35% 0 0 0;
 }
 
+.back-button {
+    float: left;
+    text-align: left;
+}
+
 /* Table */
 .table, .result-table {
     border: 1px solid #eee;
@@ -102,6 +107,10 @@ input[type='date'] {
 
 .ser-num {
     padding: 0;
+}
+
+#th-bold {
+    border: 2px solid #dddddd;
 }
 /* End Table*/
 
@@ -207,4 +216,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-/* End Slider */
+/* End Switch */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test formatting for i-MAP</title>
+    <title>Business table for i-MAP</title>
 
     <script type="text/javascript" src="eel.js"></script>
     <script type="text/javascript" src="month_load.js"></script>
@@ -14,6 +14,8 @@
 </head>
 <body onload="month_load();">
     <div class="container">
+        <div id="back-button"><a href="main.html"><button type="button" class="button">На главную</button></a></div>
+        <br>
         <input type="month" id="date-for-month-table" required>
         <br>
 
@@ -21,7 +23,6 @@
             async function display_table() {
                 let date_block = document.getElementById('date-for-month-table');
                 await change_table(date_block.valueAsDate);
-                console.log(date_block.valueAsDate);
             }
         </script>
         <button type="button" class="button" onclick="display_table();">Просмотреть данные</button>
