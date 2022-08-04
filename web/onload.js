@@ -3,7 +3,7 @@ function create_num_td () {
 	var input = document.createElement("input");
 	input.setAttribute("type", "number");
 	input.setAttribute("min", "0");
-	// input.required = true;        ////////////////////////////////// required
+	input.required = true;
 	input_contrainer.appendChild(input);
 	return input_contrainer;
 }
@@ -30,7 +30,7 @@ function add_line (id) {
 	name_input.setAttribute("type", "text");
 	name_input.setAttribute("name", "name_imap");
 	name_input.setAttribute("size", "20");
-	// name_input.required = true;             ////////////////////////////////// required
+	name_input.required = true;
 	name_input_contrainer.appendChild(name_input);
 
 	// revenue_input

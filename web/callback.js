@@ -71,9 +71,9 @@ async function callback() {
 
 async function add_data_to_table() {
   let is_ready = confirm("Вы действительно хотите добавить данные в месячную таблицу?\nУже имеющиеся данные за этот день перезапишутся.");
-
   if (is_ready == true) {
-    callback();
+    let calculate_button = document.getElementById('calculate');
+    calculate_button.click();
 
     let blocks_data = [];
     for (var i = 1; i < 7; i++) {
