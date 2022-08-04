@@ -4,5 +4,6 @@
 
 ## Build
 ```
+pip install pyinstaller
 pyinstaller --noconfirm --onefile --windowed --icon "web/favicon.ico" --add-data "web;web/" --add-data "db.sqlite;."  "main.py"
 ```
