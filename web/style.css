@@ -18,7 +18,7 @@ body {
     text-align: center;
     width: calc(95% / 2);
     padding: 1%;
-    margin: 0 0 0.5% 0;
+    margin: 0 0 0.5% 0.3%;
     vertical-align: top;
 }
 
@@ -52,19 +52,50 @@ body {
 
 input[type='number'] {
     width: 80%;
+    padding: 5%;
 }
 
 input[type='text'] {
     width: 85%;
+    padding: 5%;
 }
 
-input[type='date'] {
+input[type='date'], input[type='month'] {
     margin: 1.35% 0 0 0;
+    padding: .4%;
+    outline: 2px black solid;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    transition: background-color .3s;
+}
+
+input:focus {
+    background-color: #d4d4d4;
+    transition: background-color .3s;
+}
+
+input[value='Итого'] {
+    font-weight: normal;
+    font-family: Verdana, Arial, sans-serif;;
+}
+
+input[value='Итого']:focus {
+    background-color: #2196f3;
+    transition: none;
 }
 
 .back-button {
     float: left;
     text-align: left;
+}
+
+#add-month-table-block {
+    vertical-align: center;
 }
 
 /* Table */

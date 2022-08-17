@@ -105,4 +105,9 @@ def add_data_to_table(data: list, date: str):
     return True
 
 
+@eel.expose
+def excel_export_block():
+    pass
+
+
 eel.start("main.html", mode="chrome-app")

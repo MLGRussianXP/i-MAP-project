@@ -7,6 +7,8 @@
     <title>Business table for i-MAP</title>
 
     <script type="text/javascript" src="eel.js"></script>
+    <script type="text/javascript" src="libs/xlsx.js"></script>
+
     <script type="text/javascript" src="callback.js"></script>
     <script type="text/javascript" src="onload.js"></script>
 
@@ -17,48 +19,22 @@
     <div class="container">
            <div class="box">
                <a href="month.html"><button type="button" class="button">Итог за месяц</button></a>
-               <form onsubmit="callback(); return false;" id="form">
-                  <div class="block" id="1b">
-                      <div class="big-number">1</div>
-                      <br>
-                  </div>
+               <br>
 
-                  <div class="block" id="2b">
-                      <div class="big-number">2</div>
-                      <br>
-                  </div>
+               <div id="total-button">
+                   <button type="button" class="button" id="calculate" onclick="callback(); return false;">Итого</button>
+               </div>
 
-                   <div class="block" id="3b">
-                      <div class="big-number">3</div>
-                      <br>
-                  </div>
-
-                   <div class="block" id="4b">
-                      <div class="big-number">4</div>
-                      <br>
-                  </div>
-
-                   <div class="block" id="5b">
-                      <div class="big-number">5</div>
-                      <br>
-                  </div>
-
-                   <div class="block" id="6b">
-                      <div class="big-number">6</div>
-                      <br>
-                   </div>
-
-                   <div>
-                        <input type="submit" value="Рассчитать" class="button" id="calculate">
-                   </div>
-
-                   <div class="add-month-table-block">
-                       <input type="date" required id="date-add-month-table">
-                       <button type="button" class="button" onclick="add_data_to_table();">
-                           Добавить в месячную<br>таблицу
-                       </button>
-                   </div>
-               </form>
+               <div class="add-month-table-block">
+                   <input type="date" required id="date-add-month-table">
+                   <button type="button" class="button" onclick="add_data_to_table();">
+                       Добавить в месячную<br>таблицу
+                   </button>
+                   или
+                   <button type="button" class="button" onclick="excel_export_all_blocks(); return false;">
+                       Экспорт в Excel
+                   </button>
+               </div>
            </div>
     </div>
 </body>

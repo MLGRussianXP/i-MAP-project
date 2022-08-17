@@ -7,12 +7,10 @@ function get_column_data(trs, column_idx) {
 }
 
 
-async function callback() {
-  var blocks = document.getElementsByClassName("block");
-  for (var i = 0; i < blocks.length; i++) {
-    let block = blocks[i];
+async function callback_one_block(i) {
+  let block = document.getElementById(`form_block${i}`);
 
-    var table = document.getElementById(`result-table${i + 1}`);
+  var table = document.getElementById(`result-table${i + 1}`);
     if (table == null) {
       var table = document.createElement('table');
       table.className = "result-table";
@@ -29,6 +27,7 @@ async function callback() {
     let main_table = document.getElementById(`table${i + 1}`);
     let ths = table.getElementsByTagName('th');
 
+    ths[0].innerHTML = "Итого";
     // Выручка
     let revenue_column = get_column_data(main_table.getElementsByTagName('tr'), 1);
     let total_revenue = 0;
@@ -63,8 +62,16 @@ async function callback() {
       total_fourth += input.valueAsNumber
     });
     ths[5].innerHTML = total_fourth;
-  }
 
+  return false;
+}
+
+
+async function callback() {
+  for (var i = blocks_amount - 1; i >= 0; i--) {
+    let button = document.getElementById(`calculate${i}`)
+    button.click();
+  }
   return false;
 }
 
