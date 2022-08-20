@@ -68,6 +68,7 @@ async function callback_one_block(i) {
 
 
 async function callback() {
+  let blocks_amount = document.getElementsByClassName("block").length;
   for (var i = blocks_amount - 1; i >= 0; i--) {
     let button = document.getElementById(`calculate${i}`)
     button.click();
@@ -79,29 +80,33 @@ async function callback() {
 async function add_data_to_table() {
   let is_ready = confirm("Вы действительно хотите добавить данные в месячную таблицу?\nУже имеющиеся данные за этот день перезапишутся.");
   if (is_ready == true) {
-    let calculate_button = document.getElementById('calculate');
-    calculate_button.click();
+    let blocks = document.getElementsByClassName("block");
+    document.getElementById('calculate').click();
 
     let blocks_data = [];
-    for (var i = 1; i < 7; i++) {
-      let ex_table = document.getElementById(`result-table${i}`);
+    for (var i = 1; i < blocks.length + 1; i++) {
+      let ths = document.getElementById(`table${i}`).getElementsByTagName("tr")[0].getElementsByTagName("th");
+      let first_ths = [];
+      for (var k = 2; k < ths.length; k++) {
+        first_ths.push(ths[k].getElementsByTagName("input")[0].value)
+      }
+
+      var ex_table = document.getElementById(`result-table${i}`);
       let ex_tr = ex_table.getElementsByTagName('tr')[0].getElementsByTagName('th');
       let values = [];
       for (var j = 2; j < ex_tr.length; j++) {
-        values.push(ex_tr[j].innerHTML);
+        values.push([first_ths[j - 2], ex_tr[j].innerHTML]);
       }
-      blocks_data.push(values);
+      blocks_data.push([document.getElementsByClassName("blockname_input")[i - 1].value, values]);
     }
     
     let date_block = document.getElementById('date-add-month-table');
+
     status = await eel.add_data_to_table(blocks_data, date_block.value)();
     if (status == "true") {
-      alert("Операция выполнена успешно");
+      return alert("Операция выполнена успешно");
     }
-    else {
-      console.log(status);
-      alert("Возникла ошибка при выполнении операции");
-    }
+    alert("Возникла ошибка при выполнении операции");
   }
 
   return false;

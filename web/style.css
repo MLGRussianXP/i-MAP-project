@@ -22,6 +22,21 @@ body {
     vertical-align: top;
 }
 
+.big-number {
+    margin: auto;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background: #2196f3;
+    font-size: 300%;
+}
+
 .test_input {
     padding: 10px;
     margin: 10px;
@@ -33,21 +48,6 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
-}
-
-.big-number {
-      margin: auto;
-      border-radius: 50%;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 1%;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    background: #2196f3;
-    font-size: 300%;
 }
 
 input[type='number'] {
@@ -89,6 +89,16 @@ input[value='Итого']:focus {
     transition: none;
 }
 
+.blockname_input {
+    font-size: 250%;
+    margin-bottom: 1%;
+}
+
+.th_title {
+    font-size: 130%;
+    background-color: #efefef;
+}
+
 .back-button {
     float: left;
     text-align: left;
@@ -109,7 +119,7 @@ input[value='Итого']:focus {
 
 .table th, .result-table th {
     font-weight: bold;
-    padding: 5px;
+    padding: .5%;
     background: #efefef;
     border: 1px solid #dddddd;
 }
@@ -159,7 +169,7 @@ input[value='Итого']:focus {
   font-size: 100%;
   height: 44px;
   line-height: 1.15;
-  margin: 12px 0 0;
+  margin: .5%;
   outline: none;
   overflow: hidden;
   padding: 0 25px;
@@ -182,10 +192,6 @@ input[value='Итого']:focus {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
 /* End Submit button*/
-
-.button {
-    margin: .5%;
-}
 
 /* Switch */
 .switch {
