@@ -311,21 +311,19 @@ function excel_export_all_blocks() {
 
 	let blocks_amount = document.getElementsByClassName("block").length;
 	let sheets = [];
-	for (var i = 0; i < blocks_amount; i++) {
-		sheets.push(get_table_block_data_for_export(i));
-	}
-	if (false in sheets) {
-		return false
-	}
-	// export
-	let workbook = XLSX.utils.book_new()
-	for (var i = 0; i < sheets.length; i++) {
-		worksheet = XLSX.utils.aoa_to_sheet(sheets[i]);
-		let block_name = document.getElementById(`form_block${i}`).getElementsByClassName("blockname_input")[0].value;
-		workbook.SheetNames.push(`Block ${i + 1} - ${block_name}`);
-		workbook.Sheets[`Block ${i + 1} - ${block_name}`] = worksheet;
+	for (var s = 0; s < blocks_amount; s++) {
+		sheets.push(get_table_block_data_for_export(s));
 	}
 
-
-	XLSX.writeFile(workbook, `${document.getElementById('date-add-month-table').value}.xlsx`);
+	if (!(sheets.includes(false))) {
+		// export
+		let wb = XLSX.utils.book_new();
+		for (var j = 0; j < sheets.length; j++) {
+			ws = XLSX.utils.aoa_to_sheet(sheets[j]);
+			let block_name = document.getElementById(`form_block${j}`).getElementsByClassName("blockname_input")[0].value;
+			XLSX.utils.book_append_sheet(wb, ws, `Block ${j + 1} - ${block_name}`);
+		}
+		XLSX.writeFile(wb, `${document.getElementById('date-add-month-table').value}.xlsx`);
+	}
+	return false;
 }

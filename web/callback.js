@@ -16,7 +16,7 @@ async function callback_one_block(i) {
       table.className = "result-table";
       table.id = `result-table${i + 1}`;
       let tr = document.createElement('tr');
-      for (var j = 6; j > 0; j--) {
+      for (let j = 6; j > 0; j--) {
         let th = document.createElement('th');
         tr.appendChild(th);
       }
@@ -70,7 +70,7 @@ async function callback_one_block(i) {
 async function callback() {
   let blocks_amount = document.getElementsByClassName("block").length;
   for (var i = blocks_amount - 1; i >= 0; i--) {
-    let button = document.getElementById(`calculate${i}`)
+    let button = document.getElementById(`calculate${i}`);
     button.click();
   }
   return false;

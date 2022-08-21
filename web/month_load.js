@@ -166,7 +166,7 @@ function excel_export_month(fn, dl) {
 	let wb = XLSX.utils.book_new();
 	for (var i = 0; i < tables.length; i++) {
 		let ws = XLSX.utils.table_to_sheet(document.getElementById(`ex-table${i}`));
-		XLSX.utils.book_append_sheet(wb, ws, `Table ${i + 1}`)
+		XLSX.utils.book_append_sheet(wb, ws, `Table ${i + 1}`);
 	}
 
 	let date_block = document.getElementById('date-for-month-table');
