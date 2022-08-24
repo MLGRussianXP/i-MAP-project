@@ -11,23 +11,42 @@ def load_json(filename):
 
 
 def write_json(filename, content):
+    print(filename)
     with open(filename, "w") as outfile:
         json.dump(content, outfile, ensure_ascii=True, indent=4)
 
 
 eel.init('web')
 
-db_name = 'db.json'
-if not path.isfile(db_name):
-    with open(db_name, 'w+') as file:
-        file.write(
-            '''{
-    "config": {
-        "default_db": "db.json",
-        "db_name": "db.json"
-    }
-}'''
-        )
+
+@eel.expose
+def change_database(path_to_db):
+    if path.isfile(path_to_db):
+        db = load_json(path_to_db)
+        if "check" in db and db["check"] == "i-map database":
+            global db_name
+            db_name = path_to_db
+            return True
+
+
+@eel.expose
+def get_database():
+    db = "db.json"
+    if not path.isfile(db):
+        create_db(db)
+    return db
+
+
+@eel.expose
+def create_db(name: str):
+    name_de_suffix = name.rstrip(".json")
+    write_json(
+        name_de_suffix + ".json",
+        {
+            "check": "i-map database"
+        }
+    )
+    return name_de_suffix
 
 
 def check_table(date):
@@ -93,4 +112,5 @@ def add_data_to_table(data: list, date: str):
     return True
 
 
+db_name = get_database()
 eel.start("main.html", mode="chrome-app")

@@ -221,10 +221,52 @@ function del_block() {
 }
 
 
-function onload() {
+// DB
+async function change_database() {
+	let db_input = document.getElementById("data_file");
+	let result = await eel.change_database(db_input.files[0].name)();
+	if (result != true) {
+		db_input.value = "";
+		alert("База данных должна находиться в той же папке, что и исполнительный файл.\nБаза должна быть создана при помощи кнопки 'Создать базу данных'.");
+		return
+	}
+	change_db_p()
+}
+
+
+async function change_db_p() {
+	let db_p = document.getElementById("data-p");
+	db_p.innerHTML = `Текущая база данных: <b>${await eel.get_database()()}</b>`;
+}
+
+
+async function create_db() {
+	let name = prompt("Введите название новой базы данных.\nИмейте ввиду - уже имеющаяся база данных с таким же именем будет очищена.");
+	if (name == "") {
+    	return alert("Введите название новой базы данных!");
+	}
+	else if (name == null) {
+		return
+	}
+	else {
+		let name_de_suffix = await eel.create_db(name)();
+		await eel.change_database(name_de_suffix + ".json")();
+		change_db_p()
+		let db_input = document.getElementById("data_file");
+		db_input.value = "";
+	}
+}
+
+
+// onload
+async function onload() {
 	for (let i = 0; i < 6; i++) {
 		add_block(i);
 	}
+
+	let db_input = document.getElementById("data_file");
+	db_input.addEventListener('change', change_database);
+	change_db_p()
 
 	var date = new Date();
 	let date_input = document.getElementById('date-add-month-table');
@@ -232,6 +274,7 @@ function onload() {
 }
 
 
+// EXCEL
 function get_table_block_data_for_export(block_idx) {
 	let trs = document.getElementById(`table${parseInt(block_idx) + 1}`).getElementsByTagName('tr');
 	let table_data = [];

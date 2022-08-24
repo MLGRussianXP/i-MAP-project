@@ -15,6 +15,16 @@
 </head>
 <body onload="month_load();">
     <div class="container">
+        <div class="database">
+            <label for="data_file_month">Выберите базу данных.<br>База должна находиться в той же
+               папке,<br>что и исполнительный файл.</label><br><br>
+            <input type="file" id="data_file_month" name="imap-database" accept=".json">
+            <p id="data-p-month"></p>
+            <button type="button" class="button" onclick="create_db(); return false;">
+               Создать базу данных
+            </button>
+        </div><br><br><br>
+
         <div id="back-button"><a href="main.html"><button type="button" class="button">На главную</button></a></div>
         <br>
         <input type="month" id="date-for-month-table" required>

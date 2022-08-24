@@ -137,6 +137,48 @@ function get_column_data(trs, column_idx) {
 }
 
 
+// DB
+async function change_database() {
+	let db_input = document.getElementById("data_file_month");
+	let result = await eel.change_database(db_input.files[0].name)();
+	if (result != true) {
+		db_input.value = "";
+		alert("База данных должна находиться в той же папке, что и исполнительный файл.\nБаза должна быть создана при помощи кнопки 'Создать базу данных'.");
+		return
+	}
+	change_db_p()
+
+	// Reload
+	let date_block = document.getElementById('date-for-month-table');
+	await change_table(date_block.value);
+}
+
+
+async function change_db_p() {
+	let db_p = document.getElementById("data-p-month");
+	db_p.innerHTML = `Текущая база данных: <b>${await eel.get_database()()}</b>`;
+}
+
+
+async function create_db() {
+	let name = prompt("Введите название новой базы данных.\nИмейте ввиду - уже имеющаяся база данных с таким же именем будет очищена.");
+	if (name == "") {
+    	return alert("Введите название новой базы данных!");
+	}
+	else if (name == null) {
+		return
+	}
+	else {
+		let name_de_suffix = await eel.create_db(name)();
+		await eel.change_database(name_de_suffix + ".json")();
+		change_db_p();
+		let db_input = document.getElementById("data_file_month");
+		db_input.value = "";
+	}
+}
+
+
+// Load
 async function month_load() { // Main / Design
 	// Date
 	Date.prototype.daysInMonth = function() {
@@ -144,6 +186,11 @@ async function month_load() { // Main / Design
 	};
 	let date_block = document.getElementById('date-for-month-table');
 	date_block.valueAsDate = new Date();
+
+	// File
+	let db_input = document.getElementById("data_file_month");
+	db_input.addEventListener('change', change_database);
+	change_db_p()
 
 	// Divs
 	await change_table(date_block.value);

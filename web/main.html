@@ -18,6 +18,16 @@
 <body onload="onload();">
     <div class="container">
            <div class="box">
+               <div class="database">
+                   <label for="data_file">Выберите базу данных.<br>База должна находиться в той же
+                       папке,<br>что и исполнительный файл.</label><br><br>
+                   <input type="file" id="data_file" name="imap-database" accept=".json">
+                   <p id="data-p"></p>
+                   <button type="button" class="button" onclick="create_db(); return false;">
+                       Создать базу данных
+                   </button>
+               </div><br><br><br>
+
                <a href="month.html"><button type="button" class="button">Итог за месяц</button></a>
                <br>
 
