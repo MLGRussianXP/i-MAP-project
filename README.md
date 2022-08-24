@@ -5,7 +5,7 @@
 ## Build
 ```
 pip install pyinstaller
-pyinstaller --noconfirm --onefile --windowed --icon "web/favicon.ico" --add-data "web;web/" -F main.py
+pyinstaller --noconfirm --windowed --name "Business table" --icon "web/favicon.ico" --add-data "web;web/" -F main.py
 ```
 
 ## How to use
@@ -13,6 +13,9 @@ pyinstaller --noconfirm --onefile --windowed --icon "web/favicon.ico" --add-data
 2. После первого запуска появится файл `db.json`, который является базой данных.
 3. Интерфейс и функционал:
   - Главная страница
+    - Блок управления базами данных:
+      - При запуске программы по умолчанию всегда используется база данных под названием `db.json`.
+      - Кнопка "Создать базу данных" создаёт новую пустую базу данных.
     - Кнопка "Итог за месяц" ведёт на страницу месячной таблицы, в которой собираются данные по всем блокам за месяц.
     - Блок (команда):
       - Содержит таблицу с данными, которую заполняет пользователь.
